@@ -19,6 +19,6 @@ from django.urls.conf import include
 from . import views
 
 urlpatterns = [
-    path('/view', views.view_events),
-    path('/create', views.create_event),
+    path('view/', views.view_events),
+    path('create/', views.create_event),
 ]

@@ -4,17 +4,22 @@
 <h1>All Events</h1>
 <table border="3px">
   <tr>
+    <th>Sl. No</th>
     <th>Title</th>
     <th>Date Time</th>
     <th>Location</th>
     <th>Description</th>
+    <th>Register</th>
   </tr>
-  {% for row in value %}
+  {% for event in events %}
     <tr>
-      <td>{{row.title}}</td>
-      <td>{{row.datetime}}</td>
-      <td>{{row.location}}</td>
-      <td>{{row.description}}</td>
+      <td>{{forloop.counter}}</td>
+      <td>{{event.title}}</td>
+      <td>{{event.datetime}}</td>
+      <td>{{event.location}}</td>
+      <td>{{event.description}}</td>
+      <td>Link to register</td>
+
     </tr>
   {% endfor %}
 
