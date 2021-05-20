@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+{% block title %} Add Products {% endblock %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+<h1>Sales</h1>
+<form action="#" method="post">
+  <div class="form-group">
+    <label for="name">Name customer</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name of Customer">
+  </div>
+  <div class="form-group">
+    <label for="prod_id">Product id:</label>
+    <input type="text" class="form-control" id="prod_id"  name="prod_id" placeholder="Enter Product id">
+  </div>
+  <div class="form-group">
+    <label for="qty">Quatity</label>
+    <input type="number" class="form-control" id="qty"  name="qty" placeholder="Enter quantity">
+  </div>
+  <button type="submit" class="btn btn-outline-danger w-25">Done</button>
+  <button type="submit" class="btn btn-outline-success w-25">Next</button>
+</form>
+
+{% endblock %}

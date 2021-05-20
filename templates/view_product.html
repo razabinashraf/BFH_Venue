@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}View Products{% endblock %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+<h1>View products</h1>
+<table border="3px">
+  <tr>
+    <th>Name</th>
+    <th>Barcode</th>
+    <th>Price</th>
+  </tr>
+  {% for row in value %}
+    <tr>
+      <td>{{row[1]}}</td>
+      <td>{{row[2]}}</td>
+      <td>{{row[3]}}</td>
+    </tr>
+  {% endfor %}
+
+</table>
+
+{% endblock %}
