@@ -15,7 +15,7 @@ def home(request) :
             auth.login(request, user)
             return redirect("events")
         else :
-            messages.info(request, 'invalid credentials')
+            messages.info(request, 'Invalid credentials')
             return redirect('/')
     else :
         return render(request, 'index.html')

@@ -2,6 +2,11 @@
 {% block title %}Home{% endblock %}
 {% block content %}
 <h1>Welcome to Venue: Please Log in</h1>
+<div class="">
+  {% for message in messages %}
+  <h3 style="color: red;">{{ message }} </h3>
+  {% endfor %}
+</div>
         <form method = "post">
           {% csrf_token %}
 

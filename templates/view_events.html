@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Events{% endblock %}
+{% block content %}
+<h1>All Events</h1>
+<table border="3px">
+  <tr>
+    <th>Title</th>
+    <th>Date Time</th>
+    <th>Location</th>
+    <th>Description</th>
+  </tr>
+  {% for row in value %}
+    <tr>
+      <td>{{row.title}}</td>
+      <td>{{row.datetime}}</td>
+      <td>{{row.location}}</td>
+      <td>{{row.description}}</td>
+    </tr>
+  {% endfor %}
+
+</table>
+
+{% endblock %}
