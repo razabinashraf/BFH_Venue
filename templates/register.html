@@ -27,4 +27,8 @@
   <button type="submit" class="btn btn-primary btn-block">Submit</button>
 </form>
 
+{% for message in messages %}
+        <h2>{{message}}</h2>
+        {% endfor %}
+
 {% endblock %}

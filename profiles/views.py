@@ -19,5 +19,35 @@ def home(request) :
             return redirect('/')
     else :
         return render(request, 'index.html')
+
+
+
 def register(request) :
-    return render(request, 'register.html')
+    if request.method == 'POST':
+        name = request.POST['name']
+        username = request.POST['username']
+        password1 = request.POST['password']
+        password2 = request.POST['cpassword']
+        email = request.POST['email']
+        if password1 == password2:
+            if User.objects.filter(username=username).exists():
+                messages.info(request,'username taken')
+                return redirect('/register')
+                
+                
+            elif User.objects.filter(email=email).exists():
+                messages.info(request,'email taken')
+                return redirect('/register')
+                
+
+            else:
+                user = User.objects.create_user(username=username,password=password1,email=email,first_name=name)
+                user.save();
+                print('user created')
+                return redirect('/')
+            
+        else :
+            messages.info(request,'password mismatch')
+            return redirect('/register')  
+    else:              
+        return render(request, 'register.html')

@@ -18,11 +18,18 @@
       <td>{{event.datetime}}</td>
       <td>{{event.location}}</td>
       <td>{{event.description}}</td>
-      <td>Link to register</td>
+      <td><form action="/events/{{event.id}}" method="get">
+        
+        <input type="submit" value="register">
+         </form></a></td>
 
     </tr>
   {% endfor %}
 
 </table>
+<form action="/events/create">
+  {% csrf_token %}
+  <input type="submit" value="Click here to create an event" class="btn btn-primary btn-block"/>
+</form>
 
 {% endblock %}
