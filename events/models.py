@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class event(models.Model) :
+    user_id = models.ForeignKey(User,on_delete=models.CASCADE)
     title = models.CharField(max_length=30)
     datetime = models.DateTimeField()
     location = models.CharField(max_length=30)

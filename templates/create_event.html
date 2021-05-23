@@ -4,6 +4,7 @@
 
 <h1>Create event</h1>
 <form action="#" method="post">
+  {% csrf_token %}
   <div class="form-group">
     <label for="pname">Title</label>
     <input type="text" class="form-control" id="pname" name="title" placeholder="Enter event title">
@@ -24,7 +25,7 @@
     <label for="price">Description</label>
     <input type="text" class="form-control" id="price"  name="description" placeholder="Enter Description">
   </div>
-  <button type="submit" class="btn btn-primary btn-block">Submit</button>
+  <button type="submit" value ='event' class="btn btn-primary btn-block">Submit</button>
 
 
 </form>

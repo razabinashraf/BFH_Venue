@@ -10,6 +10,8 @@
     <th>Location</th>
     <th>Description</th>
     <th>Register</th>
+    <th>created by</th>
+
   </tr>
   {% for event in events %}
     <tr>
@@ -22,6 +24,7 @@
         
         <input type="submit" value="register">
          </form></a></td>
+         <td>{{event.user_id}}</td>
 
     </tr>
   {% endfor %}
