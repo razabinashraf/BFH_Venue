@@ -3,6 +3,7 @@
 {% block content %}
 
 <h1>Create event</h1>
+{% csrf_token %}
 <form action="#" method="post">
   {% csrf_token %}
   <div class="form-group">
