@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 {% block title %}Event Registrations{% endblock %}
 {% block content %}
+<div class=""></div>
+{% for message in messages %}
+  <h3 style="color: green;"></h3>{{ message }} </h3>
+  {% endfor %}
+</div>
 <h1>All Registrations</h1>
 <table border="3px">
   <tr>
