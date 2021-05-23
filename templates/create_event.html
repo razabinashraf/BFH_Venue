@@ -3,6 +3,7 @@
 {% block content %}
 
 <h1>Create event</h1>
+{% csrf_token %}
 <form action="#" method="post">
   <div class="form-group">
     <label for="pname">Title</label>

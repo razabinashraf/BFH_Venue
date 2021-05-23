@@ -10,7 +10,6 @@ class event(models.Model) :
     max_participants = models.IntegerField()
     description = models.TextField()
 
-class register_event(models.Model):
+class event_registration(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     event = models.ForeignKey(event, on_delete= models.CASCADE)
-

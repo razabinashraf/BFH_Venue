@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Event Registrations{% endblock %}
+{% block content %}
+<h1>All Registrations</h1>
+<table border="3px">
+  <tr>
+    <th>Sl. No</th>
+    <th>Event Title</th>
+    <th>Event Description</th>
+    <th>Registered user</th>
+  </tr>
+  {% for registration in registrations %}
+    <tr>
+      <td>{{forloop.counter}}</td>
+      <td>{{registration.event.title}}</td>
+      <td>{{registration.event.description}}</td>
+      <td>{{registration.user.first_name}}</td>
+    </tr>
+  {% endfor %}
+
+</table>
+<form action="/events/create">
+  {% csrf_token %}
+  <input type="submit" value="Click here to create an event" class="btn btn-primary btn-block"/>
+</form>
+
+{% endblock %}
