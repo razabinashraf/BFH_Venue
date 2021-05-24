@@ -23,22 +23,7 @@ def create_event(request) :
     else:
         return render(request, 'create_event.html',)
 
-def profile(request, id):
-    the_id = get_object_or_404(event, id=id)
-    return render(request, 'profile.html', {'id': id,})    
 
-
-
-
-
-
-
-
-
-
-
-    
-    return render(request, 'create_event.html',)
 
 def register_event(request, event_id):
     if request.user.is_authenticated:
