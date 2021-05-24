@@ -2,16 +2,16 @@
 # Venue
 Event portal for college clubs, which can be used to create events and register for the same.
 ## Team members
-1. Farhan Faizal[https://github.com/farhan369]
-2. Raza Ilthumish[https://github.com/razabinashraf]
-3. Faiz Bin Saleem[https://github.com/Bin-Saleem]
+1. [Farhan Faizal](https://github.com/farhan369)
+2. [Raza Ilthumish](https://github.com/razabinashraf)
+3. [Faiz Bin Saleem](https://github.com/Bin-Saleem)
 ## Team Id
 BFH/recd9caFj6MWQQczF/2021.
 ## Link to product walkthrough
-[https://www.loom.com/share/646f1a1d647943e9a99566cb50d1a21c]
+[Walkthrough](https://www.loom.com/share/646f1a1d647943e9a99566cb50d1a21c)
 ## How it Works ?
-1. Working of Front-end[https://www.loom.com/share/646f1a1d647943e9a99566cb50d1a21c]
-2. Working of Back-end[https://www.loom.com/share/4ffce064920d4624bcad0863be8e27fb]
+1. [Working of Front-end](https://www.loom.com/share/646f1a1d647943e9a99566cb50d1a21c)
+2. [Working of Back-end](https://www.loom.com/share/4ffce064920d4624bcad0863be8e27fb)
 ## Libraries used
 Django - 3.2.3
 ## How to configure
